@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+  <meta charset="utf-8">
+	<title>A discussion of the advantages and challenges of setting up, distributing and designing high quality web-based experiments for psychology and other behavioral sciences - a topic under surprisingly little academic research.</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/media-queries.css">         
+
+   <!-- Script
+   =================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+	=================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+	<div id="top"></div>
+   <div id="preloader"> 
+	   <div id="status">
+         <img src="images/loader.gif" height="60" width="60" alt="">
+         <div class="loader">Loading...</div>
+      </div>
+   </div>
+
+   <!-- Header
+   =================================================== -->
+    <header id="main-header">
+
+    <div class="row header-inner">
+
+          <nav id="nav-wrap">         
+             
+             <a class="mobile-btn" href="#nav-wrap" title="Show navigation">
+                <span class='menu-text'>Show Menu</span>
+                <span class="menu-icon"></span>
+             </a>
+            <a class="mobile-btn" href="#" title="Hide navigation">
+                <span class='menu-text'>Hide Menu</span>
+                <span class="menu-icon"></span>
+            </a>         
+
+            <ul id="nav" class="nav">
+                <li class="current"><a href="index.html#hero">Home.</a></li>
+                <li><a href="index.html#portfolio">Projects.</a></li>
+                <li><a href="index.html#about">About.</a></li>
+                <li><a href="index.html#services">Interests.</a></li>
+                <li><a href="blog.html#hero">Blog.</a></li>              
+                <li><a href="#footer">Contact.</a></li>
+             </ul>  
+
+           <ul id="nav2" class="nav">
+              <li><a href="https://www.linkedin.com/pub/tuuli-p%C3%B6ll%C3%A4nen/43/291/65"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="http://www.github.com/tuuleh"><i class="fa fa-github"></i></a></li>
+           </ul> 
+
+          </nav> <!-- /nav-wrap -->       
+
+       </div> <!-- /header-inner -->
+
+   </header> 
+
+
+   <!-- Page Title
+   ================================================== -->
+   <section id="page-title">	
+   	  
+		<div class="row">
+
+			<div class="twelve columns">
+
+				<h1>The Blog<span>.</span></h1>
+				<p></p>
+
+			</div>			    
+
+		</div> <!-- /row -->	   
+
+   </section> <!-- /page-title -->
+
+
+   <!-- Content
+   ================================================== -->
+   <section id="content">
+
+   	<div class="row">
+
+	   	<div id="main" class="tab-whole">
+
+	         <article class="entry">
+
+					<header class="entry-header">
+
+						<h1 class="entry-title">
+              A series of blog posts about web-based experiments in behavioral sciences
+						</h1> 				 
+						
+						<div class="entry-meta">
+							<ul>
+								<li>July 9, 2014</li>
+								<span class="meta-sep">•</span>								
+								<!-- <li><a rel="category tag" title="" href="#">Ghost</a></li>
+								<span class="meta-sep">•</span> -->
+								<li>Tuuli Pöllänen</li>
+							</ul>
+						</div> 
+						 
+					</header>
+
+					<div class="entry-content-media">
+            <div class="post-thumb">
+              <img src="images/mental-rotation-puzzles.jpg">
+            </div> 
+          </div>
+						
+					<div class="entry-content">
+
+						<p class = "lead">I recently had a talk about the state of open-source programmable systems for generating experiments for behavioral research. I decided to write up a series of blog posts capturing the most important points of my presentation, involving introductions on a few browser-based systems for creating experiments, a discussion on the challenges and benefits of these web-based solutions, and how the development of programmable behavioral experiments could be improved.</p>
+
+            <p>So, what kind of experiments are we talking about here? Experiments for behavioural research, such as tasks for assessing cognitive functions, consist of simple tests that can be used to evaluate different aspects of a respondent’s psychological functions. Examples of such function are processing speed, simple or complex reaction times, working memory capacity, task switching and so on. These tasks are often computerized, and as they have gained popularity and are relatively easy to implement, a miscellaneous set of solutions has emerged as academics and enthusiasts develop their own solutions according to their own needs, skills, preferences and resources. These solutions range from readily available, extensive and customizable test batteries in a “custom” language (e.g. PEBL) to more loosely defined software that may provide a GUI as well as the option to program some of the code (e.g. Psychopy). Several more or less entirely graphical, commercial systems exist, as well as a large set of initially promising but nearly dead open-source projects that have gotten left behind for a reason or another (unfortunately including the rather promising PXLab project after the developer passed away).</p>
+
+            <p>When it comes to web experiments, or experiments that the participant could run through a browser without having to download anything or going to a lab to participate, a rather short list of options exists. I found only a few non-commercial systems for creating web experiments (WebExp, PXLab and jsPsych), each with their own setbacks and benefits. Systems for web experiments come in a smaller supply, they have gone through less research and development than programmatic offline experiment systems, and they involve a set of problems that can be relatively successfully mitigated by lab experimentation. But even so, there are still scenarios where one might want to take the risk and choose highly optimized web experimentation ahead of laboratory experiments, especially since with developments in technology, many of these shortcomings become less and less significant.</p>
+
+            <p>After this short introduction, I invite you to read the next blog post, where I will discuss more in detail the setbacks and benefits of web-based systems.</p>
+					
+					</div> 
+
+	  		  <div class="pagenav group">
+               <span class="prev"><a href="big_intuition.html" rel="prev">Previous</a></span>
+               <span class="next"><a href="advantages_challenges.html" rel="next">Next</a></span>            
+          </div>  
+
+				</article> <!-- /entry -->
+						   
+	   	</div> <!-- /main -->  
+
+	   </div> <!-- /row -->      
+
+   </section> <!-- /content -->  
+
+
+   <!-- Footer
+   ================================================== -->
+   <footer id = "footer">
+
+      <div class="row">       
+
+         <div class="six columns tab-whole footer-about">
+            
+            <h3></h3>
+               
+            <p>If you have wishes for research you would like conducted, or would like to collaborate with me on a project, I'd be happy to hear from you! I’m highly mobile and always looking for challenges related to user experience research, psychometrics, and data-analysis, so if you feel like your project could benefit from a data-driven geek with a background in psychology, send me a message! 
+            </p>
+
+         </div> <!-- /footer-about -->
+
+         <div class="six columns tab-whole right-cols">
+
+            <div class="row">
+
+               <div class="columns_container">
+
+                  <div class="columns">
+                    <h3 class="social">    Social</h3>
+                    <ul>
+                       <li><a href="https://www.linkedin.com/pub/tuuli-p%C3%B6ll%C3%A4nen/43/291/65">LinkedIn</a></li>
+                    </ul>
+                 </div>
+
+                 <div class="columns">
+                    <h3 class="professional">    CV</h3>
+                    <ul>
+                       <li><a href="/images/cvTuuliPollanen.pdf">I'm up for hire!</a></li>
+                    </ul>
+                 </div>
+
+                 <div class="columns last">
+                    <h3 class="contact">    Contact Me</h3>
+                    <ul>
+                      <li><a href="mailto:tuuli.pollanen@gmail.com">tuuli.pollanen@gmail.com</a></li>
+                    </ul>
+                 </div>                  
+               </div> <!-- /columns -->             
+
+            </div> <!-- /Row(nested) -->
+
+         </div>
+
+         <small><p class="copyright"> Terms of Use: this work is a modified version of the a free website template, released under the Creative Commons Attribution 3.0 License. <br>The original version is made by Styleshout and available at their website at <a href ="http://www.styleshout.com/free-templates/puremedia/">www.styleshout.com.</a></p></small>        
+
+         <div id="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#page-title"><span>Top</span><i class="fa fa-long-arrow-up"></i></a>
+         </div>
+
+      </div> <!-- /row -->
+
+   </footer> <!-- /footer -->
+
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>   
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/backstretch.js"></script> 
+   <script src="js/waypoints.js"></script>  
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+  <meta charset="utf-8">
+	<title>My experience creating a battery of JavaScript-based web-experiments using jsPsych and Node.js with Express 4.0 and Sequelize. The battery consists of a team cohesion inventory (GEQ), NASA-TLX, the Flanker task, a two-dimensional mental rotation task, a Spatial Span task and the Tower of London.</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/media-queries.css">         
+
+   <!-- Script
+   =================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+	=================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+	<div id="top"></div>
+   <div id="preloader"> 
+	   <div id="status">
+         <img src="images/loader.gif" height="60" width="60" alt="">
+         <div class="loader">Loading...</div>
+      </div>
+   </div>
+
+   <!-- Header
+   =================================================== -->
+    <header id="main-header">
+
+    <div class="row header-inner">
+
+          <nav id="nav-wrap">         
+             
+             <a class="mobile-btn" href="#nav-wrap" title="Show navigation">
+                <span class='menu-text'>Show Menu</span>
+                <span class="menu-icon"></span>
+             </a>
+            <a class="mobile-btn" href="#" title="Hide navigation">
+                <span class='menu-text'>Hide Menu</span>
+                <span class="menu-icon"></span>
+            </a>         
+
+            <ul id="nav" class="nav">
+                <li class="current"><a href="index.html#hero">Home.</a></li>
+                <li><a href="index.html#portfolio">Projects.</a></li>
+                <li><a href="index.html#about">About.</a></li>
+                <li><a href="index.html#services">Interests.</a></li>
+                <li><a href="blog.html#hero">Blog.</a></li>              
+                <li><a href="#footer">Contact.</a></li>
+             </ul>  
+
+           <ul id="nav2" class="nav">
+              <li><a href="https://www.linkedin.com/pub/tuuli-p%C3%B6ll%C3%A4nen/43/291/65"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="http://www.github.com/tuuleh"><i class="fa fa-github"></i></a></li>
+           </ul> 
+
+          </nav> <!-- /nav-wrap -->       
+
+       </div> <!-- /header-inner -->
+
+   </header> 
+
+
+   <!-- Page Title
+   ================================================== -->
+   <section id="page-title">	
+   	  
+		<div class="row">
+
+			<div class="twelve columns">
+
+				<h1>The Blog<span>.</span></h1>
+				<p></p>
+
+			</div>			    
+
+		</div> <!-- /row -->	   
+
+   </section> <!-- /page-title -->
+
+
+   <!-- Content
+   ================================================== -->
+   <section id="content">
+
+   	<div class="row">
+
+	   	<div id="main" class="tab-whole">
+
+	         <article class="entry">
+
+					<header class="entry-header">
+
+						<h1 class="entry-title">
+              My experience developing a web-based experiment with jsPsych on Node.js
+						</h1> 				 
+						
+						<div class="entry-meta">
+							<ul>
+								<li>October 30, 2014</li>
+								<span class="meta-sep">•</span>								
+								<!-- <li><a rel="category tag" title="" href="#">Ghost</a></li>
+								<span class="meta-sep">•</span> -->
+								<li>Tuuli Pöllänen</li>
+							</ul>
+						</div> 
+						 
+					</header>
+
+          <div class="entry-content-media">
+            <div class="post-thumb">
+              <img src="images/smexy_span.png">
+            </div> 
+          </div>
+						
+					<div class="entry-content">
+
+            <p class = "lead"> These last couple of months, I’ve been very, very busy.</p>
+
+            <p>At the start, I didn't know much about web development. I had some experience with Java and Python, but I was new to the world of JavaScript and the common pitfalls one has to avoid to develop well functioning, if not beautiful, JavaScript applications. But I had to program a batch of web-based cognitive tasks for my masters thesis, so I pulled up my sleeves and got to work. My first task was to learn how to work with <a href="http://www.jspsych.org/">jsPsych</a> - a JavaScript library for creating web-based experiments, a rather recent work by Josh de Leeuw (you can fork the jsPsych repository <a href="https://github.com/jodeleeuw/jsPsych">here</a>). JsPsych comes with a number of ready-built plugins for creating different kinds of tasks. I used them with some modifications for my Flanker and Tower of London tasks and a couple of questionnaires, built a new plugin for my mental rotation task, and also programmed one independent cognitive test that didn't utilize jsPsych (the Spatial Span task). If you're interested in the source code, check out the <a href="https://github.com/Tuuleh/masters-battery">GitHub repo</a> for my test battery.</p>
+
+            <p>Once I had programmed all of the experiments and as I tested them locally - they worked perfectly, outputting flawless JSON with all the things I wanted to collect from the responses and more - I prematurely patted myself on the back as I'd read that web-experiments required 'only some back end considerations' and so I thought that the hard part was over. How hard could it possibly be to deploy something this simple? Since I felt rather competent with my Python at this point, what followed was two weeks of scrutiny over Python-based web frameworks and their tutorials (TurboGears and Django) and a head-ache over considering what of the utilities I'd really need, and what appeared to be excessive. There was a <i>lot</i> of crud in the Python-based solutions and a bunch of things I really, really did not need, but that seemed integral parts of the system. Most frameworks simply seem to be best-equipped for creating more 'typical' sites, with a landing page, maybe some dynamic content, some links for redirecting the user to other parts of the site, or to other sites. In this case, the basic utilities in the not-so-parsimonious minimal packages come in handy.
+            </p>
+            <p>Typical web-experiments look very different. You may have a landing page with an informed consent that the participant has to accept before proceeding. Then you'd have an instruction screen that would tell the participant what they have to do during the trial, after which there would be a set of training tasks. During the tasks, a stimulus is presented on the screen, and the user processes the stimulus and responds with key presses or mouse clicks according to the instructions. After the training set is completed, an intermittent instruction screen may appear announcing that the experiment is about to start, followed by the experiment itself, with tasks similar to those in the training section. Depending on the experiment, after that particular test, another one may occur, with again an instruction screen, a training section and then the experiment with its tasks. Simple web-based experiments like this are extremely linear and require very minimal utilities. You simply post data to the database after each experiment is complete, and get the next page in the experimental sequence. Of course you can use different utilities if you wish to add elegance or features to the design (e.g. you could add an option to log in onto a site, then access the experiment, and the user could always come back to a feedback page to view how their results scale with other participants), but the MVP of a web-based experiment is, indeed, very minimal.
+            </p>
+            <p>After a talk with a friend of mine, who develops full stack JavaScript, I decided to start looking at solutions in JS instead. I started with Node.js and I was thrilled when the Hello World tutorial took me merely ten minutes, with installation and all. I was even more excited to find out exactly how modular the system is - I could just pick and add things that I found useful on the fly. So I built my web-experiment on Node.js with Express and Sequelize (although I will probably experiment with some other database than MySQL next time around) and deployed it to DigitalOcean. With some advice and tutoring from a very good friend, I launched the experiment in a couple of weeks. So in the end, in all reality, it wasn't that difficult. It was a very, very steep learning curve but I learned a lot, and I'd be confident building another app now that I've finished with my first one. 
+            </p>
+            <p>
+            I can even genuinely say I enjoyed the process, and I can recognize some things I'd do differently next time to add some elegance. But I also think that the extra features you can add to your web-based experiments can offer your participants some convenience over laboratory participation. If you manage to acquire intrinsically motivated participants who wish to take part in more than one study, a login system that stores demographic variables really makes sense. That way your participant can simply complete the task every time, without having to re-enter their data every time. This also makes a results feedback page more feasible and allows the participant access to their own data.</p>					
+					</div> 
+
+	  			<div class="pagenav group">
+               <span class="prev"><a href="advantages_challenges.html" rel="prev">Previous</a></span>
+               <span class="next"><a href="blog.html" rel="next">Next</a></span>            
+          </div>  
+
+				</article> <!-- /entry -->
+						   
+	         
+	   	</div> <!-- /main -->  
+
+	   </div> <!-- /row -->      
+
+   </section> <!-- /content -->  
+
+
+   <!-- Footer
+   ================================================== -->
+   <footer id = "footer">
+
+      <div class="row">       
+
+         <div class="tab-whole footer-about">
+            
+            <h3></h3>
+               
+            <p>If you have wishes for research you would like conducted, or would like to collaborate with me on a project, I'd be happy to hear from you! I’m highly mobile and always looking for challenges related to user experience research, psychometrics, and data-analysis, so if you feel like your project could benefit from a data-driven geek with a background in psychology, send me a message! 
+            </p>
+
+         </div> <!-- /footer-about -->
+
+         <div class="six columns tab-whole right-cols">
+
+            <div class="row">
+
+               <div class="columns_container">
+
+                  <div class="columns">
+                    <h3 class="social">    Social</h3>
+                    <ul>
+                       <li><a href="https://www.linkedin.com/pub/tuuli-p%C3%B6ll%C3%A4nen/43/291/65">LinkedIn</a></li>
+                    </ul>
+                 </div>
+
+                 <div class="columns">
+                    <h3 class="professional">    CV</h3>
+                    <ul>
+                       <li><a href="/images/cvTuuliPollanen.pdf">I'm up for hire!</a></li>
+                    </ul>
+                 </div>
+
+                 <div class="columns last">
+                    <h3 class="contact">    Contact Me</h3>
+                    <ul>
+                      <li><a href="mailto:tuuli.pollanen@gmail.com">tuuli.pollanen@gmail.com</a></li>
+                    </ul>
+                 </div>                  
+               </div> <!-- /columns -->             
+
+            </div> <!-- /Row(nested) -->
+
+         </div>
+
+         <small><p class="copyright"> Terms of Use: this work is a modified version of the a free website template, released under the Creative Commons Attribution 3.0 License. <br>The original version is made by Styleshout and available at their website at <a href ="http://www.styleshout.com/free-templates/puremedia/">www.styleshout.com.</a></p></small>        
+
+         <div id="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#page-title"><span>Top</span><i class="fa fa-long-arrow-up"></i></a>
+         </div>
+
+      </div> <!-- /row -->
+
+   </footer> <!-- /footer -->
+
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>   
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/backstretch.js"></script> 
+   <script src="js/waypoints.js"></script>  
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
