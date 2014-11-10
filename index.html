@@ -2,13 +2,13 @@
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 
    <!--- Basic Page Needs
    ================================================== -->
-   <meta charset="utf-8">
-	<title>Web-experiments and web-based psychometrics by Tuuli Pöllänen</title>
+  <meta charset="utf-8">
+	<title>Cyberpsychology, web-based experimental psychology and psychology-spiced tech by Tuuli Pöllänen: An assortment of projects and articles falling under the categories of web-based experiments in behavioral sciences, usability and user experience research, psychometrics, behavioral analytics and generally, the human aspects of information technology.</title>
 	<meta name="description" content="">  
 	<meta name="author" content="">
 
@@ -18,270 +18,508 @@
 
 	<!-- CSS
     ================================================== -->
-   <link rel="stylesheet" href="css/default.css">
-	<link rel="stylesheet" href="css/layout.css">
-   <link rel="stylesheet" href="css/media-queries.css">
-   <link rel="stylesheet" href="css/animate.css">
-   <link rel="stylesheet" href="css/prettyPhoto.css">
+   <link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/media-queries.css">         
 
    <!-- Script
-   ================================================== -->
+   =================================================== -->
 	<script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+	=================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
 
 </head>
 
-<body>
+<body class="homepage">
 
-   <div id="preloader">      
-      <div id="status">
-         <img src="images/preloader.gif" height="64" width="64" alt="">
+   <div id="preloader"> 
+	   <div id="status">
+         <img src="images/loader.gif" height="60" width="60" alt="">
+         <div class="loader">Loading...</div>
       </div>
    </div>
+   
 
    <!-- Header
+   =================================================== -->
+   <header id="main-header">
+
+   	<div class="row header-inner">
+
+	      <nav id="nav-wrap">         
+	         
+	         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">
+	         	<span class='menu-text'>Show Menu</span>
+	         	<span class="menu-icon"></span>
+	         </a>
+         	<a class="mobile-btn" href="#" title="Hide navigation">
+         		<span class='menu-text'>Hide Menu</span>
+         		<span class="menu-icon"></span>
+         	</a>         
+
+	         <ul id="nav" class="nav">
+	            <li class="current"><a class="smoothscroll" href="#hero">Home.</a></li>
+		          <li><a class="smoothscroll" href="#portfolio">Projects.</a></li>
+	            <li><a class="smoothscroll" href="#about">About.</a></li>
+              <li><a class="smoothscroll" href="#services">Interests.</a></li>
+	            <li><a class="smoothscroll" href="#journal">Blog.</a></li>	            
+	            <li><a class="smoothscroll" href="#footer">Contact.</a></li>
+	         </ul> 
+
+           <ul id="nav2" class="nav">
+              <li><a href="https://www.linkedin.com/pub/tuuli-p%C3%B6ll%C3%A4nen/43/291/65"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="http://www.github.com/tuuleh"><i class="fa fa-github"></i></a></li>
+           </ul> 
+
+	      </nav> <!-- /nav-wrap -->	      
+
+	   </div> <!-- /header-inner -->
+
+   </header> 
+
+
+   <!-- Hero
+   =================================================== -->
+   <section id="hero">	
+   	  
+		<div class="row hero-content">
+
+			<div class="twelve columns flex-container">
+
+			   <div id="hero-slider" class="flexslider">
+
+				   <ul class="slides">
+
+					   <!-- Slide -->
+					   <li>
+						   <div class="flex-caption">
+								<h1><br>Welcome to my virtual laboratory!<br></h1>	
+								<p><a class="button stroke smoothscroll" href="#about">More About Me</a></p>																   
+							</div>						
+					   </li>
+
+					   <!-- Slide -->
+					   <li>						
+							<div class="flex-caption">
+								<h1>This is a platform for my projects in cyberpsychology and web-based experimental psychology.</h1>	
+								<p><a class="button stroke smoothscroll" href="#portfolio">Ongoing projects</a></p>									   
+							</div>					
+					   </li>
+
+					   <!-- Slide -->
+					   <li>
+						   <div class="flex-caption">
+								<h1 >Take a look at some of <a class="smoothscroll" href="#portfolio" title="">my work</a> or <a class="smoothscroll" href="#contact" title="">contact me</a> to discuss how we could collaborate.</h1>
+								<p><a class="button stroke smoothscroll" href="#contact">Get In Touch</a></p>										   
+							</div>
+					   </li>					              
+
+				   </ul>
+
+			   </div> <!-- .flexslider -->				   
+
+	      </div> <!-- .flex-container -->      
+
+		</div> <!-- .hero-content -->	   
+
+   </section> <!-- #hero -->
+
+
+   <!-- Portfolio
    ================================================== -->
-   <header>
-
-      <nav id="nav-wrap">         
-         
-         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
-	      <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>         
-
-         <ul id="nav" class="nav">
-            <li><a class="smoothscroll" href="#projects">Projects</a></li>
-            <li><a class="smoothscroll" href="#contact">Contact</a></li>
-            <li><a href="http://blog.tuuli.me/" target="_blank">Blog</a></li>
-            <li><a href="http://blog.tuuli.me/?page_id=31" target="_blank">About</a></li>
-         </ul> <!-- end #nav -->
-
-      </nav> <!-- end #nav-wrap -->
-
-      <ul class="header-social">
-         <li><a href="https://www.linkedin.com/pub/tuuli-p%C3%B6ll%C3%A4nen/43/291/65"><i class="fa fa-linkedin"></i></a></li>
-         <li><a href="http://www.github.com/tuuleh"><i class="fa fa-github"></i></a></li>
-      </ul>
-
-   </header> <!-- Header End -->
-
-
-   <!-- Homepage Hero
-   ================================================== -->
-   <section id="hero">
-
-	   <div class="row">
-
-		   <div class="twelve columns">
-
-			   <div class="hero-text">
-				   <h1 class="responsive-headline">Welcome to my virtual laboratory!</h1>
-
-				   <p>This is a platform dedicated to my research in the area of psychometrics and web-based experiments. The contents of this page change depending on my ongoing projects and recruitment status, so if you wish to participate, I recommend you drop by occasionally to see what's new.</p>
-			   </div>
-            
-            <div class="hero-image">
-               <img src="images/large_palmer_crop.png" alt="" />
-            </div>
-         
-		   </div>
-
-	   </div>
-
-   </section> <!-- Homepage Hero end -->
-
-   <!-- Screenshots
-   ================================================== -->
-   <section id="projects">
+   <section id="portfolio">
 
       <div class="row section-head">
 
-         <h1>Ongoing projects.</h1>
+      	<div class="twelve columns">
 
-         <p>Right now, there is one ongoing study for League of Legends-players, but I will update the contents soon to include experiments where others can also participate.
-         </p>
+	         <h1>Some of my recent work<span>.</span></h1>
+
+	         <hr />
+
+	         <p>Here, you will find links to ongoing and past projects that don't quite fall under the blog.
+	         </p>
+
+	      </div>
+
+      </div>
+
+      <div class="row items">
+
+      	<div class="twelve columns">
+
+            <div id="portfolio-wrapper" class="bgrid-fourth s-bgrid-third mob-bgrid-half group">
+
+          	   <div class="bgrid item">
+                  <div class="item-wrap">
+
+                     <a href="http://leagueoflegends.web-psychometrics.com" target="_blank">
+                        <img src="images/LoL.jpg" alt="League of Legends image">
+                        <div class="overlay"></div>                       
+                        <div class="portfolio-item-meta">
+          					      <h5>League of Legends study</h5>
+                              <p>Click here to participate if you play League of Legends!</p>
+          					    </div>                         
+                     </a>
+
+                  </div>
+          		</div> <!-- /item -->
+
+               <div class="bgrid item">
+                  <div class="item-wrap">
+
+                     <a href="http://github.com/tuuleh/masters-battery" target="_blank">
+                        <img src="images/league_consent.png" alt="Informed consent">
+                        <div class="overlay"></div>                       
+                        <div class="portfolio-item-meta">
+                          <h5>Source code for the League of Legends experiment</h5>
+                              <p>You can access the source code here. I haven't added the readme yet, so if you wish to reuse the code for a project of your own, it's best you contact me for assistance.</p>
+                        </div>                         
+                     </a>
+
+                  </div>
+              </div> <!-- /item -->
+
+               <div class="bgrid item">
+                  <div class="item-wrap">
+
+                     <a href="http://github.com/tuuleh/insight_challenge" target="_blank">
+                        <img src="images/sudoku.jpg" alt="Hotel Sign">
+                        <div class="overlay">
+                        	<div class="portfolio-item-meta">
+          					      <h5>Sudoku Solver</h5>
+                              <p>A Python-based solution for solving Sudoku-puzzles I programmed for the Insight Data Engineering coding challenge</p>
+          					      </div>
+                        </div>                        
+                     </a>
+
+                  </div>
+          		</div> <!-- /item -->
+
+               <div class="bgrid stack item">
+                  <div class="item-wrap">
+
+                     <a href="http://prezi.com/user/Tuuli/" target="_blank">
+                        <img src="images/talk.jpg">                        
+                        <div class="overlay">
+                        	<div class="portfolio-item-meta">
+          					      <h5>Slides for my talks</h5>
+                              <p>I've had a number of talks and presentation in the past, and even though I have since stopped using Prezi, I still have many of my slides available there.</p>
+          					      </div>
+                        </div>                        
+                     </a>
+
+                  </div>
+          		</div> <!-- /item -->
+
+            </div> <!-- /portfolio-wrapper -->
+
+         </div> <!-- /twelve -->
+
+      </div>  <!-- /row -->
+      
+   </section> <!-- /Portfolio -->
+
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
+
+    <div class="row section-head">
+
+      <div class="twelve columns">
+
+           <h1>Who Am I<span>?</span></h1>
+
+           <img src='images/car2.jpg' height='50%' width='50%'>
+
+           <p>I'm a MA psychology student with one foot firmly in empirical psychology, research and psychological statistics, and the other in digital media and information technology. I’m open for research collaboration and freelancing opportunities and looking for employment in San Francisco Bay Area.</p>
+
+          <p>I'd love to hear from you, so you should drop me a <a href="mailto:tuuli.pollanen@gmail.com">message</a>!<br>
+            If you're hiring, you can read more about me in my <a href = "images/cvTuuliPollanen.pdf" target="_blank">CV</a>. 
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+        <div class="mob-whole four columns">
+          <h3>My objective.</h3>
+              <p>
+              I'm looking to develop a career in user experience research and analytics in technology. I'm actively searching for opportunities where I would get to utilize my entire skill-set in a driven mixed professional team, while enjoying opportunities to develop professionally - I view learning new technologies on the job a huge benefit.
+              </p>
+        </div>
+        <div class="mob-whole four columns">
+          <h3>My process.</h3>
+              <p>
+              Developing a set of interdisciplinary skills is necessary to navigate and survive on the cutting edge of technology. I spend vast amounts of my free time developing a skill set spanning over data-analysis, research methodology and experimental design, web development, programming and writing. 
+              </p>
+        </div>
+        <div class="mob-whole four columns">
+          <h3>My principles.</h3>
+              <p>
+              I believe in taking intellectual risks, I approach my life and my work with a healthy dose of exploration, and I believe that this healthy combination of ambition and curiosity is what breeds innovation. I believe in self development as a social obligation and in fully committing myself to things that I find important.
+              </p>
+        </div>
+
+      </div>
+
+   </section> <!-- /about -->
+
+
+   <!-- Services Section
+   ================================================== -->
+   <section id="services">
+
+   	<div class="row section-head">
+
+   		<div class="twelve columns">
+
+	         <h1>What I'm interested in<span>.</span></h1>
+
+	         <p>
+            I'm interested in a number of topics falling under quantitative behavioral sciences, but these are the things that really make me tick.
+	         </p>
+
+         </div>
 
       </div>
 
       <div class="row">
 
-         <div class="twelve columns">
+      	<div class="twelve columns">
 
-            <!-- screenshots-wrapper -->
-            <div id="screenshots-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+	      	<div class="service-list bgrid-third s-bgrid-half mob-bgrid-whole">
 
-          	   <div class="columns item parent">
-                     <div class="item-wrap">
-                     <a href="http://leagueoflegends.web-psychometrics.com" data-imagelightbox="a" >
-                        <img src="images/LoL.jpg" alt="Line Icons">
-                        <div class="overlay child">
-                           <div class="link-icon content"><i>League of Legends study</i></div>
-                        </div> 
-                     </a>
-                  </div>
-          		</div> <!-- item end -->
+	      		<div class="bgrid">
 
-               <div class="columns item parent">
-                     <div class="item-wrap">
-                     <a href="" data-imagelightbox="a" >
-                        <img src="images/spatial_span.jpg" alt="Line Icons">
-                        <div class="overlay child">
-                           <div class="link-icon content"><i>More experiments coming up soon!</i></div>
-                        </div> 
-                     </a>
-                  </div>
-               </div> <!-- item end -->
+	               <div class="icon-part">
+	               	<span class="icon-user"></span>
+	               </div>
 
-               <div class="columns item parent">
-                     <div class="item-wrap">
-                     <a href="http://blog.tuuli.me/?page_id=31" data-imagelightbox="a" >
-                        <img src="images/car.jpg" alt="Line Icons">
-                        <div class="overlay child">
-                           <div class="link-icon content"><i>More about me</i></div>
-                        </div> 
-                     </a>
-                  </div>
-               </div> <!-- item end -->
+	               <h3>User experience research.</h3>
 
-               <div class="columns item parent">
-                     <div class="item-wrap">
-                     <a href="http://blog.tuuli.me" data-imagelightbox="a" >
-                        <img src="images/black_white_dataflood.jpg" alt="Line Icons">
-                        <div class="overlay child">
-                           <div class="link-icon content"><i>Blog</i></div>
-                        </div> 
-                     </a>
-                  </div>
-               </div> <!-- item end -->
-              
-            </div> <!-- portfolio-wrapper end -->
+	               <div class="service-content">	                  
+		               <p>
+                    Anything can be improved with engagement - and what better way to maximize engagement, than to research where it comes from and how to influence it? User experience is about more than just usability - It's about maximizing reach and value through engagement.
+	         			   </p> 
+	               </div>      
 
-         </div> <!-- twelve columns end -->
+	            </div> <!-- /bgrid -->
 
-      </div>  <!-- end row -->
+				   <div class="bgrid">
 
-   </section> <!-- Screenshots End -->
+	              	<div class="icon-part">
+	               	<i class="icon-graph"></i>
+	               </div>
+
+	               <h3>Statistics and behavioral analytics.</h3>                  
+
+	               <div class="service-content">	                  
+		               <p>
+                   I think the most insightful type of data science is creative, thought-provoking and methodologically sound while combining a number of different sources. Personally, I'm fascinated by combinations of behavioral artifacts and the ways they can be used in concordance with other sources of data to extract information about users' cognition and motivation.
+	         			   </p> 
+	               </div>                                 
+
+	            </div> <!-- /bgrid -->
+
+				   <div class="bgrid">
+
+	              	<div class="icon-part">	               	
+	               	<i class="icon-screen-desktop"></i>
+	               </div>
+
+	               <h3>Web-based experimental psychology.</h3>
+
+	               <div class="service-content">		                  
+		               <p>
+                    Experimental psychology has been around since the 19th century, but it has only recently started leaking to the cyberspace. The change of domain has implications for methodology and it creates considerations for research design and data-analysis that are not always apparent on first sight.
+	         			   </p> 
+	               </div>                               
+
+	            </div> <!-- /bgrid -->
+
+				   
+	      	</div> <!-- /service-list -->
+
+	      </div> <!-- /twelve -->
+
+      </div> <!-- /row -->      
+
+   </section> <!-- /services -->   
 
 
-   <!-- Testimonials Section
-   ================================================== -->
-  <section id="testimonials">
+   
+
+   <!-- journal
+   =================================================== -->
+   <section id="journal">
+
+	   <div class="row section-head">
+
+	   	<div class="twelve columns">
+
+			   <h1>An assortment of my thoughts<span>.</span></h1>
+
+			   <hr />
+
+			   <p>Here, you can find an assortment of my most recent posts and articles on topics related to psychology, digital media and information technology.
+		      </p>	         
+
+		    </div>
+
+	   </div>
 
       <div class="row">
 
-         <span><i class="quote-left fa fa-quote-left"></i></span>
+      	<div class="twelve columns">
 
-         <div class="text-container">
+	         <div id="blog-wrapper" class="bgrid-third s-bgrid-half mob-bgrid-whole group">
 
-            <div class="twelve columns flex-container">
+	            <article class="bgrid">
+						
+						<h5>October 30, 2014</h5>
+	               <h3><a href="jspsych_experience.html">My experience developing a web-based experiment with jsPsych on Node.js</a></h3>
+	                           
+	               <p>Recently, I programmed a set of surveys and cognitive tasks for my master's thesis. For some of the tasks, I used jsPsych - a JavaScript-library for creating web-based experiments, for the back-end I chose Node.js with Express 4.0 and Sequelize. I deployed the experiment on DigitalOceans, and I describe my experience here. If you'd be interested in a series of tutorials on how to deploy jsPsych experiments, throw me an email!
+	               </p>
+	                        
+	            </article>
 
-               <div class="flexslider">
+	            <article class="bgrid">
+						
+						<h5>July 30, 2014</h5>
+	               <h3><a href="advantages_challenges.html">The advantages and challenges of web-based experiments.</a></h3>
+	                           
+	               <p>
+	               Web experiments are excellent for maximizing the scope of a study when it comes to the participant pool. Utilizing web experiments, one can expect very large and diverse samples, which can open doors to addressing hypotheses that simply could not be tested in a lab environment. But as always, this major advantage has to be weighted and considered in light of the shortcomings and challenges of setting up and distributing web-based assessment systems.
+	            	</p>
+	                        
+	            </article>
 
-                  <ul class="slides">
+	            <article class="bgrid">
+						
+						<h5>July 9, 2014</h5>	
+	               <h3><a href="web_experiments.html">A series of posts on web-based experiments in behavioral sciences.</a></h3>
+	                           
+	               <p>
+	               I recently had a talk about the state of open-source programmable systems for generating experiments for behavioral research. I decided to write up a series of blog posts capturing the most important points of my presentation, involving introductions on a few browser-based systems for creating experiments, a discussion on the challenges and benefits of these web-based solutions, and how the development of programmable behavioral experiments could be improved.
+	            	</p>
+	                        
+	            </article>
 
-                     <li>
-                        <blockquote>
-                           <p>Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.
-                           </p>
-                           <cite>John Tukey</cite>
-                        </blockquote>
-                     </li> <!-- slide ends -->
+	            <article class="bgrid first">
+						
+						<h5>June 5, 2014</h5>
+	               <h3><a href="single.html">Big Data vs. intuition - why not both? Big intuition.</a></h3>
+	                           
+	               <p>
+	               I have been working through a book on how to leverage analytics and user segmentation to drive revenue in a freemium business, where the revenue is generated only by a fraction of the user base. The book sparked a wider curiosity towards business analytics that I have been satisfying by going through online courses on topics ranging from Web analytics to databases and map reduce.
+	            	</p>
+	                        
+	            </article>
 
-                  </ul>
+	            <article class="bgrid">
+						
+						<h5>May 18, 2014</h5>
+	               <h3><a href="childrens_apps.html">Communalities in popular children's apps.</a></h3>
+	                           
+	               <p>
+	               I spent some time writing a report – although mostly for my own needs – about the main characteristics of some of the most popular children’s game apps on the iOS market, and on the values and characteristics the most prominent companies developing apps for children seem to capitalize on. Reflecting on the topic, I noted a few popular features in children’s apps and games from the most popular publishers.
+	            	</p>
+	                        
+	            </article>
 
-               </div> <!-- div.flexslider ends -->
+	            <article class="bgrid">
+						
+						<h5>April 17, 2014</h5>
+	               <h3><a href="it_psychology.html">About psychology and information technology.</a></h3>
+	                           
+	               <p>Over time, the blog will cover a colorful range of topics, from game studies and web experiments to usability and AI, but as a general topic, I will be writing about the role of psychology in information technology (and vice versa). Typically an initial response from people to the idea is befuddlement, as amazingly many of them think that people and computers don’t  mix. I wrote this post to disentangle some of the misconceptions.
+	            	</p>
+	                        
+	            </article>                     
 
-            </div> <!-- div.flex-container ends -->
+	         </div> <!-- /blog-wrapper -->
 
-         </div>  <!-- text-container ends -->
+	      </div> <!-- /twelve -->
 
-         <span><i class="quote-right fa fa-quote-right"></i></span>
+      </div> <!-- /row -->
 
-      </div> <!-- row ends -->
-
-   </section> <!-- Testimonials Section End-->
-
-
+   </section> <!-- /blog -->
 
    <!-- Footer
    ================================================== -->
-   <footer id = "contact">
+   <footer id = "footer">
 
-      <div class="row">         
+      <div class="row">       
 
-         <div class="six columns info">
-
-            <div class="footer-logo">
-            </div>
-
-            <p>
-               If you have wishes for research you would like conducted, or would like to collaborate with me on a project, I'd be happy to hear from you! I’m highly mobile and always looking for challenges related to user experience research, psychometrics, and data-analysis, so if you feel like your project could benefit from a data-driven geek with a background in psychology, send me a message!
+         <div class="six columns tab-whole footer-about">
+				
+				<h3></h3>
+               
+            <p>If you have wishes for research you would like conducted, or would like to collaborate with me on a project, I'd be happy to hear from you! I’m highly mobile and always looking for challenges related to user experience research, psychometrics, and data-analysis, so if you feel like your project could benefit from a data-driven geek with a background in psychology, send me a message! 
             </p>
 
-         </div>
+         </div> <!-- /footer-about -->
 
-         <div class="six columns right-cols">
+         <div class="six columns tab-whole right-cols">
 
             <div class="row">
 
-               <div class="columns">
-                  <h3 class="social">Social</h3>
-                  <ul>
-                     <li><a href="https://www.linkedin.com/pub/tuuli-p%C3%B6ll%C3%A4nen/43/291/65">LinkedIn</a></li>
-                  </ul>
-               </div>
+               <div class="columns_container">
 
-               <div class="columns">
-                  <h3 class="professional">CV</h3>
-                  <ul>
-                     <li><a href="http://blog.tuuli.me/wp-content/uploads/2014/11/cvTuuliPollanen.pdf" target ="blank">I'm up for hire!</a></li>
-                  </ul>
-               </div>
+                  <div class="columns">
+                    <h3 class="social">    Social</h3>
+                    <ul>
+                       <li><a href="https://www.linkedin.com/pub/tuuli-p%C3%B6ll%C3%A4nen/43/291/65">LinkedIn</a></li>
+                    </ul>
+                 </div>
 
-               <div class="columns last">
-                  <h3 class="contact">Contact Me</h3>
-                  <ul>
-                    <li><a href="mailto:tuuli.pollanen@gmail.com">tuuli.pollanen@gmail.com</a></li>
-                  </ul>
-               </div>
+                 <div class="columns">
+                    <h3 class="professional">    CV</h3>
+                    <ul>
+                       <li><a href="images/cvTuuliPollanen.pdf">I'm up for hire!</a></li>
+                    </ul>
+                 </div>
 
-            </div> <!-- Nested Row End -->
+                 <div class="columns last">
+                    <h3 class="contact">    Contact Me</h3>
+                    <ul>
+                      <li><a href="mailto:tuuli.pollanen@gmail.com">tuuli.pollanen@gmail.com</a></li>
+                    </ul>
+                 </div>                  
+               </div> <!-- /columns -->             
+
+            </div> <!-- /Row(nested) -->
 
          </div>
+
+         <small><p class="copyright"> Terms of Use: this work is a modified version of the a free website template, released under the Creative Commons Attribution 3.0 License. <br>The original version is made by Styleshout and available at their website at <a href ="http://www.styleshout.com/free-templates/puremedia/">www.styleshout.com.</a></p></small>        
 
          <div id="go-top">
-            <a class="smoothscroll" title="Back to Top" href="#hero"><i class="icon-up-open"></i></a>
+            <a class="smoothscroll" title="Back to Top" href="#hero"><span>Top</span><i class="fa fa-long-arrow-up"></i></a>
          </div>
 
-      </div> <!-- Row End -->
+      </div> <!-- /row -->
 
-   </footer> <!-- Footer End-->
+   </footer> <!-- /footer -->
 
-<div id = "license">
-      Terms of Use: this work is a modified version of the a free website template, released under the Creative Commons Attribution 3.0 License. The original version is made by Styleshout and available at their website at <a href ="http://www.styleshout.com/free-templates/woo/">www.styleshout.com.</a>
-</div>
 
-   <!-- Java Script
+   <!-- JavaScript
    ================================================== -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>   
    <script src="js/jquery.flexslider.js"></script>
-   <script src="js/waypoints.js"></script>
    <script src="js/jquery.fittext.js"></script>
-   <script src="js/jquery.fitvids.js"></script>
-   <script src="js/imagelightbox.js"></script>
-   <script src="js/jquery.prettyPhoto.js"></script>   
+   <script src="js/backstretch.js"></script> 
+   <script src="js/waypoints.js"></script>  
    <script src="js/main.js"></script>
-
-   <script>
-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-     ga('create', 'UA-55827450-1', 'auto');
-     ga('send', 'pageview');
-   </script>
 
 </body>
 

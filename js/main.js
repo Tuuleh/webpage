@@ -7,38 +7,86 @@
 (function($) {
 
 	/*---------------------------------------------------- */
-  	/* Preloader
-   ------------------------------------------------------ */ 
+	/* Preloader
+	------------------------------------------------------ */ 
   	$(window).load(function() {
 
    	// will first fade out the loading animation 
     	$("#status").fadeOut("slow"); 
 
     	// will fade out the whole DIV that covers the website. 
-    	$("#preloader").delay(500).fadeOut("slow").remove();     
-      
-    	$('.js #hero .hero-image img').addClass("animated fadeInUpBig"); 
-      $('.js #hero .buttons a.trial').addClass("animated shake");    
+    	$("#preloader").delay(500).fadeOut("slow").remove();      
 
   	}) 
 
+  	/*----------------------------------------------------*/
+  	/* Backstretch
+  	/*----------------------------------------------------*/
 
-  	/*---------------------------------------------------- */
+  	if($("html").hasClass('ie8')) {
+  		$("#hero").backstretch("images/hero-bg.jpg");  	
+  		$("#page-title").backstretch("images/hero-bg.jpg");	
+  	} 
+
+   /*----------------------------------------------------*/
+  	/* FitText Settings
+  	------------------------------------------------------ */
+  	setTimeout(function() {
+
+   	$('#page-title h1').fitText(1, { minFontSize: '38px', maxFontSize: '54px' });
+
+  	}, 100);
+
+
+	/*----------------------------------------------------*/
+	/* Adjust Primary Navigation Background Opacity
+	------------------------------------------------------*/
+   $(window).on('scroll', function() {
+
+		var h = $('header').height();
+		var y = $(window).scrollTop();
+      var header = $('#main-header');
+
+	   if ((y > h + 30 ) && ($(window).outerWidth() > 768 ) ) {
+	      header.addClass('opaque');
+	   }
+      else {
+         if (y < h + 30) {
+            header.removeClass('opaque');
+         }
+         else {
+            header.addClass('opaque');
+         }
+      }
+
+	});
+
+   /*-----------------------------------------------------*/
+	/* Alert Boxes
+  	-------------------------------------------------------*/
+	$('.alert-box').on('click', '.close', function() {
+	  $(this).parent().fadeOut(500);
+	});	
+
+
+   /*-----------------------------------------------------*/
   	/* Mobile Menu
    ------------------------------------------------------ */  
+   var menu_icon = $("<span class='menu-icon'></span>");
   	var toggle_button = $("<a>", {                         
                         id: "toggle-btn", 
-                        html : "Menu",
+                        html : "<span class='menu-text'>Menu</span>",
                         title: "Menu",
                         href : "#" } 
                         );
   	var nav_wrap = $('nav#nav-wrap')
   	var nav = $("ul#nav");  
-
-  	/* id JS is enabled, remove the two a.mobile-btns 
+   
+   /* if JS is enabled, remove the two a.mobile-btns 
   	and dynamically prepend a.toggle-btn to #nav-wrap */
   	nav_wrap.find('a.mobile-btn').remove(); 
-  	nav_wrap.prepend(toggle_button); 
+  	toggle_button.append(menu_icon); 
+   nav_wrap.prepend(toggle_button); 
 
   	toggle_button.on("click", function(e) {
    	e.preventDefault();
@@ -46,24 +94,14 @@
   	});
 
   	if (toggle_button.is(':visible')) nav.addClass('mobile');
-  	$(window).resize(function(){
+  	$(window).resize(function() {
    	if (toggle_button.is(':visible')) nav.addClass('mobile');
     	else nav.removeClass('mobile');
   	});
 
-  	$('ul#nav li a').on("click", function(){      
+  	$('ul#nav li a').on("click", function() {      
    	if (nav.hasClass('mobile')) nav.fadeOut('fast');      
   	});
-
-
-  	/*----------------------------------------------------*/
-  	/* FitText Settings
-  	------------------------------------------------------ */
-  	setTimeout(function() {
-
-   	$('h1.responsive-headline').fitText(1.2, { minFontSize: '25px', maxFontSize: '40px' });
-
-  	}, 100);
 
 
   	/*----------------------------------------------------*/
@@ -91,157 +129,112 @@
 	var sections = $("section"),
 	navigation_links = $("#nav-wrap a");
 
-	sections.waypoint( {
+	if($("body").hasClass('homepage')) {
 
-      handler: function(event, direction) {
+		sections.waypoint( {
 
-		   var active_section;
+	      handler: function(event, direction) {
 
-			active_section = $(this);
-			if (direction === "up") active_section = active_section.prev();
+			   var active_section;
 
-			var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
+				active_section = $(this);
+				if (direction === "up") active_section = active_section.prev();
 
-         navigation_links.parent().removeClass("current");
-			active_link.parent().addClass("current");
+				var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
 
-		},
-		offset: '35%'
-	});
+	         navigation_links.parent().removeClass("current");
+				active_link.parent().addClass("current");
 
+			},
+			offset: '25%'
+		});
 
-	/*----------------------------------------------------*/
-  	/* FitVids
-  	/*----------------------------------------------------*/
-   $(".fluid-video-wrapper").fitVids();
-
+	}
 
    /*----------------------------------------------------*/
-  	/* Waypoints Animations
-   ------------------------------------------------------ */
-  	$('.js .design').waypoint(function() {
-   	$('.js .design .feature-media').addClass( 'animated pulse' );    
-  	}, { offset: 'bottom-in-view' });
-
-  	$('.js .responsive').waypoint(function() {
-   	$('.js .responsive .feature-media').addClass( 'animated pulse' );    
-  	}, { offset: 'bottom-in-view' });
-
-  	$('.js .cross-browser').waypoint(function() {
-   	$('.js .cross-browser .feature-media').addClass( 'animated pulse' ); 
-  	}, { offset: 'bottom-in-view' });
-
-  	$('.js .video').waypoint(function() {
-   	$('.js .video .feature-media').addClass( 'animated pulse' );     
-  	}, { offset: 'bottom-in-view' });
-
-  	$('.js #subscribe').waypoint(function() {
-   	$('.js #subscribe input[type="email"]').addClass( 'animated fadeInLeftBig show' ); 
-    	$('.js #subscribe input[type="submit"]').addClass( 'animated fadeInRightBig show' );   
-  	}, { offset: 'bottom-in-view' });
-
-  	
-  	/*----------------------------------------------------*/
   	/* Flexslider
   	/*----------------------------------------------------*/
-  	$('.flexslider').flexslider({
-   	namespace: "flex-",
-      controlsContainer: ".flex-container",
-      animation: 'slide',
-      controlNav: true,
-      directionNav: false,
-      smoothHeight: true,
-      slideshowSpeed: 7000,
-      animationSpeed: 600,
-      randomize: false,
+  	$(window).load(function() {  		
+
+	  	$('#hero-slider').flexslider({
+	   	namespace: "flex-",
+	      controlsContainer: ".flex-container",
+	      animation: 'fade',
+	      controlNav: true,
+	      directionNav: false,
+	      smoothHeight: true,
+	      slideshowSpeed: 7000,
+	      animationSpeed: 600,
+	      randomize: false
+	   });	   
+
+   });
+
+ 
+	/*----------------------------------------------------*/
+	/*	contact form
+	------------------------------------------------------*/
+
+   $('form#contactForm button.submit').on('click', function() {
+
+      $('#image-loader').fadeIn();
+
+      var contactFname = $('#contactForm #contactFname').val();
+      var contactLname = $('#contactForm #contactLname').val();
+      var contactEmail = $('#contactForm #contactEmail').val();
+      var contactSubject = $('#contactForm #contactSubject').val();
+      var contactMessage = $('#contactForm #contactMessage').val();
+
+      var data = 'contactFname=' + contactFname  + '&contactLname=' + contactLname + 
+                 '&contactEmail=' + contactEmail + '&contactSubject=' + contactSubject + 
+                 '&contactMessage=' + contactMessage;
+
+      $.ajax({
+
+	      type: "POST",
+	      url: "inc/sendEmail.php",
+	      data: data,
+	      success: function(msg) {
+
+            // Message was sent
+            if (msg == 'OK') {
+               $('#image-loader').fadeOut();
+               $('#message-warning').hide();
+               $('#contactForm').fadeOut();
+               $('#message-success').fadeIn();   
+            }
+            // There was an error
+            else {
+               $('#image-loader').fadeOut();
+               $('#message-warning').html(msg);
+	            $('#message-warning').fadeIn();
+            }
+
+	      }
+
+      });
+      return false;
    });
 
 
-   /*----------------------------------------------------*/
-   /* ImageLightbox
-   /*----------------------------------------------------*/
+	/*-----------------------------------------------------*/
+  	/* Back to top
+   ------------------------------------------------------ */ 
+	var pxShow = 300; // height on which the button will show
+	var fadeInTime = 400; // how slow/fast you want the button to show
+	var fadeOutTime = 400; // how slow/fast you want the button to hide
+	var scrollSpeed = 300; // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
 
-   if($("html").hasClass('cssanimations')) {
+   // Show or hide the sticky footer button
+	jQuery(window).scroll(function() {
 
-      var activityIndicatorOn = function()
-      {
-       	$( '<div id="imagelightbox-loading"><div></div></div>' ).appendTo( 'body' );
-      },
-      activityIndicatorOff = function()
-      {
-       	$( '#imagelightbox-loading' ).remove();
-      },
+		if (jQuery(window).scrollTop() >= pxShow) {
+			jQuery("#go-top").fadeIn(fadeInTime);
+		} else {
+			jQuery("#go-top").fadeOut(fadeOutTime);
+		}
 
-      overlayOn = function()
-      {
-       	$( '<div id="imagelightbox-overlay"></div>' ).appendTo( 'body' );
-      },
-      overlayOff = function()
-      {
-       	$( '#imagelightbox-overlay' ).remove();
-      },
-
-      closeButtonOn = function( instance )
-      {
-       	$( '<a href="#" id="imagelightbox-close" title="close"><i class="fa fa fa-times"></i></a>' ).appendTo( 'body' ).on( 'click touchend', function(){ $( this ).remove(); instance.quitImageLightbox(); return false; });
-      },
-      closeButtonOff = function()
-      {
-       	$( '#imagelightbox-close' ).remove();
-      },
-
-      captionOn = function()
-      {
-      	var description = $( 'a[href="' + $( '#imagelightbox' ).attr( 'src' ) + '"] img' ).attr( 'alt' );
-        	if( description.length > 0 )
-         	$( '<div id="imagelightbox-caption">' + description + '</div>' ).appendTo( 'body' );        
-      },
-      captionOff = function()
-      {
-       	$( '#imagelightbox-caption' ).remove();
-      };     
-
-      var instanceA = $( 'a[data-imagelightbox="a"]' ).imageLightbox(
-      {
-         onStart:   function() { overlayOn(); closeButtonOn( instanceA ); },
-         onEnd:     function() { overlayOff(); captionOff(); closeButtonOff(); activityIndicatorOff(); },
-         onLoadStart: function() { captionOff(); activityIndicatorOn(); },
-         onLoadEnd:   function() { captionOn(); activityIndicatorOff(); }
-
-      });
-        
-    }      
-    else {
-         
-      /*----------------------------------------------------*/
-   	/* prettyPhoto for old IE
-   	/*----------------------------------------------------*/
-      $("#screenshots").find(".item-wrap a").attr("rel","prettyPhoto[pp_gal]");
-
-      $("a[rel^='prettyPhoto']").prettyPhoto( {
-
-      	animation_speed: 'fast', /* fast/slow/normal */
-      	slideshow: false, /* false OR interval time in ms */
-      	autoplay_slideshow: false, /* true/false */
-      	opacity: 0.80, /* Value between 0 and 1 */
-      	show_title: true, /* true/false */
-      	allow_resize: true, /* Resize the photos bigger than viewport. true/false */
-      	default_width: 500,
-      	default_height: 344,
-      	counter_separator_label: '/', /* The separator for the gallery counter 1 "of" 2 */
-      	theme: 'pp_default', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
-      	hideflash: false, /* Hides all the flash object on a page, set to TRUE if flash appears over prettyPhoto */
-      	wmode: 'opaque', /* Set the flash wmode attribute */
-      	autoplay: true, /* Automatically start videos: True/False */
-      	modal: false, /* If set to true, only the close button will close the window */
-      	overlay_gallery: false, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
-      	keyboard_shortcuts: true, /* Set to false if you open forms inside prettyPhoto */
-      	deeplinking: false,
-      	social_tools: false
-
-      }); 
-
-    }
+	}); 
 
 
 })(jQuery);
