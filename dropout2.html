@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+  <meta charset="utf-8">
+    <title>Mitigating participant drop-out in web-experiments by delivering a functional product experience.</title>
+    <meta name="description" content="">  
+    <meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/media-queries.css">         
+
+   <!-- Script
+   =================================================== -->
+    <script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+    =================================================== -->
+    <link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+    <div id="top"></div>
+   <div id="preloader"> 
+       <div id="status">
+         <img src="images/loader.gif" height="60" width="60" alt="">
+         <div class="loader">Loading...</div>
+      </div>
+   </div>
+
+   <!-- Header
+   =================================================== -->
+    <header id="main-header">
+
+    <div class="row header-inner">
+
+          <nav id="nav-wrap">         
+             
+             <a class="mobile-btn" href="#nav-wrap" title="Show navigation">
+                <span class='menu-text'>Show Menu</span>
+                <span class="menu-icon"></span>
+             </a>
+            <a class="mobile-btn" href="#" title="Hide navigation">
+                <span class='menu-text'>Hide Menu</span>
+                <span class="menu-icon"></span>
+            </a>         
+
+            <ul id="nav" class="nav">
+                <li class="current"><a href="index.html#hero">Home.</a></li>
+                <li><a href="index.html#portfolio">Projects.</a></li>
+                <li><a href="index.html#about">About.</a></li>
+                <li><a href="index.html#services">Interests.</a></li>
+                <li><a href="blog.html#hero">Blog.</a></li>              
+                <li><a href="#footer">Contact.</a></li>
+             </ul>  
+
+           <ul id="nav2" class="nav">
+              <li><a href="https://www.linkedin.com/pub/tuuli-p%C3%B6ll%C3%A4nen/43/291/65"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="http://www.github.com/tuuleh"><i class="fa fa-github"></i></a></li>
+           </ul> 
+
+          </nav> <!-- /nav-wrap -->       
+
+       </div> <!-- /header-inner -->
+
+   </header> 
+
+
+   <!-- Page Title
+   ================================================== -->
+   <section id="page-title">    
+      
+        <div class="row">
+
+            <div class="twelve columns">
+
+                <h1>The Blog<span>.</span></h1>
+                <p></p>
+
+            </div>              
+
+        </div> <!-- /row -->       
+
+   </section> <!-- /page-title -->
+
+
+   <!-- Content
+   ================================================== -->
+   <section id="content">
+
+    <div class="row">
+
+        <div id="main" class="tab-whole">
+
+             <article class="entry">
+
+                    <header class="entry-header">
+
+                        <h1 class="entry-title">
+              How <i>not</i> to make motivated participants quit - yes, this sounds backward, but it's not. 
+                        </h1>                
+                        
+                        <div class="entry-meta">
+                            <ul>
+                                <li>December 3, 2014</li>
+                                <span class="meta-sep">•</span>                             
+                                <!-- <li><a rel="category tag" title="" href="#">Ghost</a></li>
+                                <span class="meta-sep">•</span> -->
+                                <li>Tuuli Pöllänen</li>
+                            </ul>
+                        </div> 
+                         
+                    </header>
+
+          <div class="entry-content-media">
+            <div class="post-thumb">
+              <img src="images/Computer_guy.png" width="50%" height="50%">
+            </div> 
+          </div>
+                        
+                    <div class="entry-content">
+                        
+<p>In the previous blog post we discussed how hygienic factors and motivators can influence participant satisfaction, engagement and drop-out in the context of web-experiments. We're still continuing with analogy of web-experiments as digital media products, so if you didn't read up on the previous post, go do it now! </p>
+
+<p>Some participants are excited about your research, but they drop out when they're disappointed with the execution. The first thing you need to do is to care for hygienic factors. Polish your user experience to a degree where there is nothing intrinsic to the design that would irritate the user sufficiently to cause them to quit. It is possible that the user will still drop out because the battery is too long or because the task is too difficult, but if they drop out because your instructions are poorly written or because your web page lacks usability, you lose a participant for absolutely no reason - and you know exactly how valuable that data would have been. Additionally, data from the participants who <i>do</i> participate despite of the unfavorable conditions will be littered by artifacts that might be there simply due to limited usability. 
+</p>
+<p>It saves you a lot of time to do even the simplest usability studies before launch. Just ask for a bit of feedback, try the talk-out-loud protocol with a fellow researcher, but do not go launching blindly, because this is where you differ from production in a very important way - you have no iterative development process. Once your experiment it's launched, it's up. No-one goes altering their instrumentation in the middle of sampling. 
+</p>
+<p>Last week I participated in a poorly designed experiment, where I had to click dots to produce lines between them on a map, with the instruction to connect all of the dots so that the total length of the line was as short as possible. The stimulus was stacked into the lower left quadrant of the screen, the dots were very small and it required quite a bit of maneuvering to click them, and if I clicked on the wrong place, the entire figure would disappear. On top of this, there was a distracting clock constantly ticking on the left side panel, the colors were very conflicting, and after four trials of the experiment, I noticed there were buttons with features that had not even been presented in the training trials, such as an option to import a previously used pattern (which, upon clicking, deleted the pattern I had just completed as my previous trial had been submitted with an empty response due to pattern disappearing bug). Needless to say, it was infuriating, I dropped out and sent e-mail to the authors recommending some improvements. 
+</p>
+<p>Your participants will do the same. This is where you do customer support. <i>Respond to them</i>. During my previous research, I received a few bug reports and requests for improvements. I tried my best to answer them within the same day, whether it was something I could work with or not. If it was due to an intrinsic characteristic of the task - e.g. dissatisfaction with wording in a standardized instrument or irritation with how the mental rotation tasks were difficult - I would respond telling them that I very much appreciate their feedback and participation despite of it being mentally strenuous, I'd tell them the idea behind the task, and that it's something I unfortunately cannot fix right now. If it was due to a problem with the page, I'd ask for more details and we could typically resolve the problem very quickly (e.g. the participant had scripts turned off in the browser). If it was a genuine bug report that I simply could not reproduce, I apologised for the inconvenience and promised to look into it further. If it was just general curiosity about the study with questions about the instruments, I would answer as soon as possible and try and use clear language to the best of my ability. This is all very, very important, especially if you're sampling from several sources and hoping for a diverse and volunteering participant pool, because it promotes a positive experience with your product, and positive experience <i>promotes virality</i>, which is what gives web-experiments their natural scope. I got a very positive response from communicating with the participants, and many of the ones I talked to directly said they forwarded the experiment to their friends. The moral of the story is that you can turn <i>negative</i> product experience, such as frustration about a particular task, into engagement and virality by taking personal contact.
+</p>
+<p>But as I mentioned, some things are out of your control. Test batteries are long and cognitive tasks are mentally straining, by definition. There will always be some level of drop-out that you cannot optimize for, which is why it's also a good idea to take it into account when ordering your test battery. It's best to pipe data throughout the experiment so you can use incomplete data as an addition to full completions, and it's a good idea to have your demographic items at the start if you want to know <i>who</i> dropped out.          
+                    </p>                    </div> 
+
+                <div class="pagenav group">
+                <span class="prev"><a href="dropout.html" rel="prev">Previous</a></span>
+                <span class="next"><a href="blog.html" rel="next">Next</a></span>            
+          </div>  
+
+                </article> <!-- /entry -->
+                           
+             
+        </div> <!-- /main -->  
+
+       </div> <!-- /row -->      
+
+   </section> <!-- /content -->  
+
+
+  <!-- Footer
+   ================================================== -->
+   <footer id = "footer">
+
+      <div class="row">       
+
+         <div class="six columns tab-whole footer-about">
+                
+                <h3></h3>
+               
+            <p>If you have wishes for research you would like conducted, or would like to collaborate with me on a project, I'd be happy to hear from you! I’m highly mobile and always looking for challenges related to user experience research, psychometrics, and data-analysis, so if you feel like your project could benefit from a data-driven geek with a background in psychology, send me a message! 
+            </p>
+
+         </div> <!-- /footer-about -->
+
+         <div class="six columns tab-whole right-cols">
+
+            <div class="row">
+
+               <div class="columns_container">
+
+                  <div class="columns">
+                    <h3 class="social">    Social</h3>
+                    <ul>
+                       <li><a href="https://www.linkedin.com/pub/tuuli-p%C3%B6ll%C3%A4nen/43/291/65">LinkedIn</a></li>
+                    </ul>
+                 </div>
+
+                 <div class="columns">
+                    <h3 class="professional">    CV</h3>
+                    <ul>
+                       <li><a href="images/cvTuuliPollanen.pdf">I'm up for hire!</a></li>
+                    </ul>
+                 </div>
+
+                 <div class="columns last">
+                    <h3 class="contact">    Contact Me</h3>
+                    <ul>
+                      <li><a href="mailto:tuuli.pollanen@gmail.com">tuuli.pollanen@gmail.com</a></li>
+                    </ul>
+                 </div>                  
+               </div> <!-- /columns -->             
+
+            </div> <!-- /Row(nested) -->
+
+         </div>
+
+         <small><p class="copyright"> Terms of Use: this work is a modified version of the a free website template, released under the Creative Commons Attribution 3.0 License. <br>The original version is made by Styleshout and available at their website at <a href ="http://www.styleshout.com/free-templates/puremedia/">www.styleshout.com.</a></p> </small>       
+
+         <div id="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#page-title"><span>Top</span><i class="fa fa-long-arrow-up"></i></a>
+         </div>
+
+      </div> <!-- /row -->
+
+   </footer> <!-- /footer -->
+
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>   
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/backstretch.js"></script> 
+   <script src="js/waypoints.js"></script>  
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
