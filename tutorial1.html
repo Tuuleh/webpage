@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+  <meta charset="utf-8">
+    <title>Make it pretty! Using style to increase participant engagement in web based experiments.</title>
+    <meta name="description" content="">  
+    <meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/media-queries.css">         
+
+   <!-- Script
+   =================================================== -->
+    <script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+    =================================================== -->
+    <link rel="shortcut icon" href="favicon.png" >
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55827450-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="top"></div>
+   <div id="preloader"> 
+       <div id="status">
+         <img src="images/loader.gif" height="60" width="60" alt="">
+         <div class="loader">Loading...</div>
+      </div>
+   </div>
+
+   <!-- Header
+   =================================================== -->
+    <header id="main-header">
+
+    <div class="row header-inner">
+
+          <nav id="nav-wrap">         
+             
+             <a class="mobile-btn" href="#nav-wrap" title="Show navigation">
+                <span class='menu-text'>Show Menu</span>
+                <span class="menu-icon"></span>
+             </a>
+            <a class="mobile-btn" href="#" title="Hide navigation">
+                <span class='menu-text'>Hide Menu</span>
+                <span class="menu-icon"></span>
+            </a>         
+
+            <ul id="nav" class="nav">
+                <li class="current"><a href="index.html#hero">Home.</a></li>
+                <li><a href="index.html#portfolio">Projects.</a></li>
+                <li><a href="index.html#about">About.</a></li>
+                <li><a href="index.html#services">Interests.</a></li>
+                <li><a href="blog.html#hero">Blog.</a></li>              
+                <li><a href="#footer">Contact.</a></li>
+             </ul>  
+
+           <ul id="nav2" class="nav">
+              <li><a href="https://www.linkedin.com/pub/tuuli-p%C3%B6ll%C3%A4nen/43/291/65"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="http://www.github.com/tuuleh"><i class="fa fa-github"></i></a></li>
+           </ul> 
+
+          </nav> <!-- /nav-wrap -->       
+
+       </div> <!-- /header-inner -->
+
+   </header> 
+
+
+   <!-- Page Title
+   ================================================== -->
+   <section id="page-title">    
+      
+        <div class="row">
+
+            <div class="twelve columns">
+
+                <h1>The Blog<span>.</span></h1>
+                <p></p>
+
+            </div>              
+
+        </div> <!-- /row -->       
+
+   </section> <!-- /page-title -->
+
+
+   <!-- Content
+   ================================================== -->
+   <section id="content">
+
+    <div class="row">
+
+        <div id="main" class="tab-whole">
+
+             <article class="entry">
+
+                    <header class="entry-header">
+
+                        <h1 class="entry-title">
+              Make it pretty! Use styling to make your experiment relevant and prevent it from standing out in a negative way. 
+                        </h1>                
+                        
+                        <div class="entry-meta">
+                            <ul>
+                                <li>January 28, 2015</li>
+                                <span class="meta-sep">•</span>                             
+                                <!-- <li><a rel="category tag" title="" href="#">Ghost</a></li>
+                                <span class="meta-sep">•</span> -->
+                                <li>Tuuli Pöllänen</li>
+                            </ul>
+                        </div> 
+                         
+                    </header>
+
+          <div class="entry-content-media">
+            <div class="post-thumb">
+              <img src="images/lumosity_flanker.jpg" width="50%" height="50%">
+            </div> 
+          </div>          
+            <div class="entry-content">
+                <p>Lately, I've gotten some requests for a tutorial on deploying jsPsych experiments, so I've committed to writing one. It will be slightly better suited for people with some programming experience, but if you're not familiar with the web and the terminology circulating around the technologies I'm using, please don't be intimidated at this point. I've noticed that most people are turned away by the fact that they have no experience with web development. Maybe you're an R wizard, maybe you have just a bit of experience with programming, maybe you work with JavaScript. Perhaps you'd like to deploy a web experiment, but you're not sure how to set up the back end.</p>
+
+                <p>Fret not! There are solutions for you. My intention for this tutorial is to write a solution that is sufficiently simple so that you should be able to deploy your jsPsych experiment with no previous back end experience. Knowing basic JavaScript will help you understand the code, and as always, you might need a good dose of patience and self-initiative - there's a lot you will have to learn on your own, so don't be afraid of googling. If you're a more advanced reader, please don't read too much into my words. The solution is not supposed to be production perfect and I often use simplified language because this tutorial is meant for people who don't necessarily have any experience with the web. That being said, if you have ideas for improvements or find a problem, please contact me and tell me more!</p>
+
+                <p>I'll be writing the tutorial on a Linux system. The process should not be very different on a Mac OS, but if you're on Windows, you will have to find out how to install and manage the tools on your own system. I'd recommend installing a virtual machine, which will allow you to run a Linux system inside your Windows OS. Explained in very simple words, a virtual machine used for this purpose is a program that simulates an operating system in its own window - this approach allows you to follow the tutorial step-by-step, word to word, without having to find out how to adjust the installation to a Windows environment. If you want to save yourself from a head ache, get a virtual machine here: https://www.virtualbox.org/, or go here to experiment - and to fall in love - with Linux http://www.linux.com/learn/tutorials/770346-how-to-install-and-try-linux-the-absolutely-easiest-and-safest-way! </p>
+
+                <p>The challenge with jsPsych is that it provides you with client side functionality - what happens on the server is up to you. There is a large number of different solutions and their combinations for deploying your experiment, and this is simply one of them. But for smaller scale experiments, this solution will make deploying very easy, and since it only uses free tiers of cloud hosting and storage services, it will cost you no money. </p>
+
+                <p>I'll shortly introduce the technologies we use for this tutorial. If you don't understand the descriptions, don't worry - you'll get an idea of how things work while we're working on the application. You'll need the following ingredients for your secret sauce (I'll tell you where to install them throughout the tutorial):</p>
+
+                <ol>
+                    <li>
+                        <a href = "http://www.jspsych.org">jsPsych</a> (d'oh!)
+                        <p>An open source JavaScript library for web based experiments in behavioral sciences - get it <a href = "http://www.jspsych.org">here</a>.</p>
+                    </li>
+
+                    <li>
+                        The <a href = "http://nodejs.org/">Node.js</a> runtime environment and its awesome package manager, <a href="https://www.npmjs.com/">NPM</a>
+                        <p>Node.js® is built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js represents the flesh and bones on top of which we build the back end for our experiment. Express is a web framework for Node.js, and we'll be using Mongoose - a MongoDB driver for Node.js. Find out more about node.js and its installation <a href = "http://nodejs.org/">here</a></p>
+                    </li>
+
+                    <li>
+                        <a href = "http://www.mongodb.org/" >MongoDB</a>
+                        <p>MongoDB is a cross-platform document-oriented <a href = "https://www.youtube.com/watch?v=qI_g07C_Q5I">NoSQL</a> database. It will work as the storage for the data we get out of jsPsych. If you're interested in learning more, you should read into NoSQL databases, <a href = "http://en.wikipedia.org/wiki/Relational_database">relational databases</a> and <a href = "http://json.org/">JSON</a>, since that's the format we're getting out of jsPsych.</p>
+                        <p>For more advanced readers - I personally recommend using an ORM between jsPsych and a relational database, as your experimental data can be aggregated in a way that is well suited for a relational DB. I like to make a table for each experiment, passing an identifier I use as a foreign key for the participant every time I make a request for a new page. If you use the relational approach and/or store data between tasks, you'll need to take care of some validation (making sure the participant doesn't repeat the same task several times, that there aren't several entries for the same ID etc), but the partial data gained from storing between the tasks affords you some valuable insight into performance and characteristics of participants who dropped out. </p>
+                    </li>
+
+                    <li>
+                        <a href = "https://dashboard.heroku.com/">Heroku</a> 
+                        <p>Heroku is a platform as a service (PaaS) that enables developers to build and run applications in the cloud. Heroku has a free tier that suits our needs and offers support for Node.js, so we are going to deploy our application to Heroku - this way, the entire experiment will be contained on the cloud and we do not need to worry about a web server - huzzah!</p>
+                    </li>
+
+                    <li>
+                        <a href="http://git-scm.com/">Git</a>
+                        <p>Git is a <a href = "http://en.wikipedia.org/wiki/Revision_control">version control</a> tool. In my opinion it's easiest to get started with Git by going to <a href = "https://github.com/">GitHub</a> and doing their Git bootcamp. It might not feel very intuitive at first, but you quickly grow into it, and you won't need to use it very much - the only reason you really need to set it up for this tutorial is that we will need it to deploy the experiment to Heroku. </p>
+                    </li>
+                </ol>
+            </div> 
+            <div class="pagenav group">
+                <span class="prev"><a href="dropout2.html" rel="prev">Previous</a></span>
+                <span class="next"><a href="blog.html" rel="next">Next</a></span>            
+            </div>  
+          </article> <!-- /entry -->
+        </div> <!-- /main -->  
+       </div> <!-- /row -->      
+
+   </section> <!-- /content -->  
+
+
+  <!-- Footer
+   ================================================== -->
+   <footer id = "footer">
+
+      <div class="row">       
+
+         <div class="six columns tab-whole footer-about">
+                
+                <h3></h3>
+               
+            <p>If you have wishes for research you would like conducted, or would like to collaborate with me on a project, I'd be happy to hear from you! I’m highly mobile and always looking for challenges related to user experience research, psychometrics, and data-analysis, so if you feel like your project could benefit from a data-driven geek with a background in psychology, send me a message! 
+            </p>
+
+         </div> <!-- /footer-about -->
+
+         <div class="six columns tab-whole right-cols">
+
+            <div class="row">
+
+               <div class="columns_container">
+
+                  <div class="columns">
+                    <h3 class="social">    Social</h3>
+                    <ul>
+                       <li><a href="https://www.linkedin.com/pub/tuuli-p%C3%B6ll%C3%A4nen/43/291/65">LinkedIn</a></li>
+                    </ul>
+                 </div>
+
+                 <div class="columns">
+                    <h3 class="professional">    CV</h3>
+                    <ul>
+                       <li><a href="images/cvTuuliPollanen.pdf">I'm up for hire!</a></li>
+                    </ul>
+                 </div>
+
+                 <div class="columns last">
+                    <h3 class="contact">    Contact Me</h3>
+                    <ul>
+                      <li><a href="mailto:tuuli.pollanen@gmail.com">tuuli.pollanen@gmail.com</a></li>
+                    </ul>
+                 </div>                  
+               </div> <!-- /columns -->             
+
+            </div> <!-- /Row(nested) -->
+
+         </div>
+
+         <small><p class="copyright"> Terms of Use: this work is a modified version of the a free website template, released under the Creative Commons Attribution 3.0 License. <br>The original version is made by Styleshout and available at their website at <a href ="http://www.styleshout.com/free-templates/puremedia/">www.styleshout.com.</a></p> </small>       
+
+         <div id="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#page-title"><span>Top</span><i class="fa fa-long-arrow-up"></i></a>
+         </div>
+
+      </div> <!-- /row -->
+
+   </footer> <!-- /footer -->
+
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>   
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/backstretch.js"></script> 
+   <script src="js/waypoints.js"></script>  
+   <script src="js/main.js"></script>
+
+  </body>
+</html>
